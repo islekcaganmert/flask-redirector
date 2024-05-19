@@ -6,6 +6,7 @@ TARGET_SERVER = 'https://islekcaganmert.pythonanywhere.com'
 
 
 @app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
+@app.route('/', defaults={'path': ''})
 def proxy(path):
     response = requests.request(
         method=request.method,
