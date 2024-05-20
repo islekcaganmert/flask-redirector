@@ -1,8 +1,8 @@
 from flask import Flask, request, Response
 import requests
 
-app = Flask(__name__)
 TARGET_SERVER = 'https://islekcaganmert.pythonanywhere.com'
+app = Flask(__name__, static_host=TARGET_SERVER)
 
 
 @app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
