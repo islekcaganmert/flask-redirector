@@ -2,7 +2,7 @@ from flask import Flask, request, Response
 import requests
 
 TARGET_SERVER = 'https://islekcaganmert.pythonanywhere.com'
-app = Flask(__name__, static_host=TARGET_SERVER)
+app = Flask(__name__, static_url_path='/vercel')
 
 
 @app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
